@@ -1,9 +1,15 @@
 let page = document.getElementById("page_content");
 
-class Image{
-  constructor(id, src, border="black"){
+class ParentClass(){
+  constructor(id, src){
     this.id = id;
     this.src = src;
+  }
+}
+
+class Image{
+  constructor(id, src, border="black"){
+    super(id, src);
     this.border = border;
   }
 
